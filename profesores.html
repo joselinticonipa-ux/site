@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Profesores - U.E. Gualberto Villarroel</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #fdfdfd;
+    }
+    .nav {
+      background-color: #004aad;
+      padding: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .nav a {
+      color: white;
+      text-decoration: none;
+      margin: 5px 15px;
+      font-weight: bold;
+    }
+    .nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h2 {
+      text-align: center;
+      color: #004aad;
+      margin-bottom: 30px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      justify-items: center;
+    }
+    .card {
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+      background-color: #f0f8ff;
+      width: 100%;
+      max-width: 300px;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+    .card img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      object-fit: cover;
+      border: 2px solid #004aad;
+    }
+    .card h3 {
+      color: #004aad;
+      margin: 10px 0 5px 0;
+    }
+    .card p.metadata {
+      color: #555;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    footer {
+      background-color: #004aad;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body class="page-profesores">
+  <header>
+    <nav class="nav">
+      <a href="index.html">Inicio</a>
+      <a href="estudiantes.html">Estudiantes</a>
+      <a href="profesores.html">Profesores</a>
+      <a href="colegio.html">Colegio</a>
+      <a href="reglamentos.html">Reglamentos</a>
+      <a href="areas.html">Áreas</a>
+      <a href="galeria.html">Galería</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+  <main>
+    <section class="section">
+      <div class="container">
+        <h2>Docentes</h2>
+        <div class="grid">
+          <div class="card">
+            <img src="imagenes/paula.jpeg" alt="Prof. Paula Aruquipa">
+            <h3>Prof. Paula Aruquipa</h3>
+            <p class="metadata">Materias: Matemáticas, Lenguaje, Música.<br>Niveles: 4°, 5° y 6° de primaria.</p>
+          </div>
+          <div class="card">
+            <img src="imagenes/magda1.jpeg" alt="Prof. Magda Alarcón">
+            <h3>Prof. Magda Alarcón</h3>
+            <p class="metadata">Materias: Técnica, Educación Física, Artes Plásticas.<br>Niveles: Prekínder, Kínder, 1°, 2°, 3° de primaria.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      © 2025 Unidad Educativa Gualberto Villarroel de Pampacallo | Diseñado por Yubitza Ticonipa Márquez
+    </div>
+  </footer>
+</body>
+</html>

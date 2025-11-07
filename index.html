@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Unidad Educativa Gualberto Villarroel</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ====== HERO ====== */
+    .hero {
+      background-image: url("imagenes/pampacallo.JPG"); /* CORRECTO */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white;
+      text-align: center;
+      padding: 150px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.4); /* overlay oscuro */
+    }
+
+    .hero > div {
+      position: relative;
+      z-index: 1;
+      animation: fadeInUp 2s ease forwards;
+    }
+
+    @keyframes fadeInUp {
+      from {opacity:0; transform:translateY(20px);}
+      to {opacity:1; transform:translateY(0);}
+    }
+
+    .animated-text {
+      display: inline-block;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 4px solid #00d4ff;
+      animation: typing 4s steps(40,end), blink 0.7s step-end infinite;
+      font-size: 2.8em;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-shadow: 3px 3px 10px rgba(0,0,0,0.4);
+    }
+
+    @keyframes typing { from { width:0 } to { width:100% } }
+    @keyframes blink { 50% { border-color: transparent; } }
+
+    .hero p {
+      margin-top: 15px;
+      font-size: 1.2em;
+    }
+
+    .btn {
+      margin-top: 25px;
+      display: inline-block;
+      background: linear-gradient(45deg,#00c6ff,#00CD1);
+      color: khaki;
+      padding: 12px 28px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 0 15px rgba(0,200,255,0.5);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 25px rgba(0,200,255,0.8);
+    }
+
+    /* ====== SECCIONES ====== */
+    .section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .section h2 {
+      color: #004aad;
+      font-size: 2em;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .section h2::after {
+      content: "";
+      width: 60px;
+      height: 4px;
+      background: #00c6ff;
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 4px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    }
+
+    /* ====== TARJETAS COLORES ====== */
+    .card {
+      padding: 25px;
+      border-radius: 20px;
+      color: #fff;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card:hover { transform: translateY(-8px); box-shadow: 0 10px 25px rgba(0,0,0,0.25); }
+
+    .card h3 { font-size: 1.4em; margin-bottom: 10px; }
+    .card p { font-size: 1em; opacity: 0.9; }
+
+    .card.comunicados { background: linear-gradient(135deg,#005eff,#00b7ff); }
+    .card.estudiantes { background: linear-gradient(135deg,#00b894,#00cec9); }
+    .card.docentes { background: linear-gradient(135deg,#fd9644,#fa8231); }
+
+    /* ====== GALERÍA ====== */
+    .gallery img { width:100%; height:250px; object-fit:cover; border-radius:12px; transition: transform 0.4s; }
+    .gallery img:hover { transform: scale(1.1); }
+
+    /* ====== FOOTER ====== */
+    footer {
+      background: linear-gradient(90deg,#003080,#007bff);
+      color:white;
+      text-align:center;
+      padding:20px;
+      font-size:0.9em;
+    }
+
+    @media(max-width:768px){
+      .animated-text { font-size:2em; }
+      .hero p { font-size:1.1em; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <a href="Inicio.html">Inicio</a>
+      <a href="estudiantes.html">Estudiantes</a>
+      <a href="profesores.html">Profesores</a>
+      <a href="colegio.html">Escuela</a>
+      <a href="reglamentos.html">Reglamentos</a>
+      <a href="areas.html">Áreas</a>
+      <a href="galeria.html">Galería</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="animated-text">Unidad Educativa Gualberto Villarroel</h1>
+        <p>Formando con valores, conocimiento y compromiso</p>
+        <p><a class="btn" href="colegio.html">Conócenos</a></p>
+      </div>
+    </section>
+
+    <section class="section">
+    <h2>Explora nuestro portal</h2>
+    <div class="grid grid-3">
+    
+    <a href="estudiantes.html" class="card estudiantes">
+        <h3>🎓 Estudiantes</h3>
+        <p>Horarios, Moodle y recursos educativos.</p>
+    </a>
+    
+    <a href="profesores.html" class="card docentes">
+        <h3>👩‍🏫 Docentes</h3>
+        <p>Reglamentos y recursos para profesores.</p>
+    </a>
+</div>
+</section>
+
+    <section class="section page-galeria">
+    <h2>Galería</h2>
+    <div class="gallery grid-3">
+        <div class="card"><img src="imagenes/foto1.jpg" alt="foto1"></div>
+        <div class="card"><img src="imagenes/foto2.jpg" alt="foto2"></div>
+        </div>
+    
+    <div style="margin-top: 40px; text-align: center;"> 
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe18I7KUeVZwkF8PRgY1_OI2q9oRIZKEhH8LFOjmMR8MlmQ0Q/viewform?embedded=true" 
+                style="width: 100%; max-width: 640px; height: 1394px; border: none;" 
+                frameborder="0" marginheight="0" marginwidth="0">
+        </iframe>
+    </div>
+</section>
+  </main>
+
+  <footer>
+    © 2025 Unidad Educativa Gualberto Villarroel de Pampacallo | Diseñado por Yubitza Ticonipa Márquez
+  </footer>
+</body>
+</html>
